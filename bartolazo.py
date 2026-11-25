@@ -176,8 +176,6 @@ elif page == "Hobbies":
     opportunity to turn my thoughts and emotions into music.
     """)
 
-    show_image("songwriting.jpg")
-
     st.markdown("---")
 
     st.subheader("🐱 Spending Time with My Cats")
@@ -186,8 +184,6 @@ elif page == "Hobbies":
     I also enjoy playing and spending time with my cats.
     They make my free time more enjoyable and meaningful.
     """)
-
-    show_image("cats.jpg")
 
 # INTERESTS
 elif page == "Interests":
@@ -266,5 +262,4 @@ elif page == "STEM & Engineering":
 # FOOTER
 st.markdown("---")
 st.caption("© 2026 Jamycha P. Bartolazo | Personal Portfolio")
-
 
