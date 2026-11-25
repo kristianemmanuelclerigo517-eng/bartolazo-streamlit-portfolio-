@@ -15,23 +15,13 @@ IMAGE_DIR = Path(__file__).parent / "images"
 def show_image(filename, caption=None, width=None):
     image_path = IMAGE_DIR / filename
 
-    if not image_path.exists():
-        st.error(f"Cannot find image: {image_path}")
-        return
-
-    if width:
-        st.image(str(image_path), caption=caption, width=width)
+    if image_path.exists():
+        if width:
+            st.image(str(image_path), caption=caption, width=width)
+        else:
+            st.image(str(image_path), caption=caption, use_container_width=True)
     else:
-        st.image(str(image_path), caption=caption, use_container_width=True)
-
-with st.expander("Image troubleshooting"):
-    st.write("Image folder:", str(IMAGE_DIR))
-    st.write("Folder exists:", IMAGE_DIR.exists())
-
-    if IMAGE_DIR.exists():
-        st.write("Images found:", [
-            file.name for file in IMAGE_DIR.iterdir()
-        ])
+        st.warning(f"Image not found: {filename}")
 
 # CUSTOM DESIGN
 st.markdown("""
