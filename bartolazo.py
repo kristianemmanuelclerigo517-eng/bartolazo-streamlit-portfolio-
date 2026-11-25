@@ -262,4 +262,3 @@ elif page == "STEM & Engineering":
 # FOOTER
 st.markdown("---")
 st.caption("© 2026 Jamycha P. Bartolazo | Personal Portfolio")
-
